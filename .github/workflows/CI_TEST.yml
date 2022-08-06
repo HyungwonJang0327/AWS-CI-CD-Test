@@ -34,9 +34,6 @@ jobs:
       - name: complie typescript
         run: tsc App.tsx
 
-      - name: Npm install
-        run: npm install
-
       # Runs a set of commands using the runners shell
       # - name: Run a multi-line script
       #  run: |
