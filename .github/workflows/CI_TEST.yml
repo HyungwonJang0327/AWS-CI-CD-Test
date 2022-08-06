@@ -31,8 +31,8 @@ jobs:
 
       - name: Check Node V
         run: node -v
-      - name: complie typescript
-        run: tsc App.tsx
+      - name: npm build
+        run: npm run build
 
       # Runs a set of commands using the runners shell
       # - name: Run a multi-line script
