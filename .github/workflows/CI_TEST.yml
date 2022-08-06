@@ -7,23 +7,18 @@ on:
     branches: ["main"]
   # pull_request는 main 브랜치에 대한 pr이 생성되었을 때 실행됨.
   # ex) develop 브랜치에서 push를 하고 main 브랜치에 대한 pr을 생성했을 때 실행
+  # 기존에 있는 pr에 새로 push 했을 경우에도 새롭게 자동화 진행
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: "context"
-        env:
-          COMMIT_ID: ${{ github.sha }}
-        run: echo "Commit id => $COMMIT_ID"
-      - name: print nickname
-        env:
-          TEST_NAME: ${{ secrets.TEST_NICKNAME }}
-        run: echo my Token is $TEST_NAME
-      - name: print nickname
-        env:
-          TEST_NAME: ${{ secrets.TEST_NICKNAME }}
-        run: echo my Token is $TEST_NAME
+      - name: check node -v
+        run: node -v
+      - name: install dependencies
+        run: yarn install --frozen-lockfile
+      - name: build
+        run: yarn build
 
       # Runs a set of commands using the runners shell
       # - name: Run a multi-line script
