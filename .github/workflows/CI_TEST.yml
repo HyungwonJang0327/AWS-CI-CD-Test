@@ -24,6 +24,8 @@ jobs:
         env:
           TEST_NAME: ${{ secrets.TEST_NICKNAME }}
         run: echo my Token is $TEST_NAME
+      - name: install dependencies
+        run: yarn install --frozen-lockfile
       - name: build
         run: yarn build
 
