@@ -5,6 +5,8 @@ on:
     branches: ["main"]
   pull_request:
     branches: ["main"]
+  # pull_request는 main 브랜치에 대한 pr이 생성되었을 때 실행됨.
+  # ex) develop 브랜치에서 push를 하고 main 브랜치에 대한 pr을 생성했을 때 실행
 jobs:
   build:
     runs-on: ubuntu-latest
