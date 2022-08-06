@@ -22,7 +22,7 @@ jobs:
         run: echo "Commit id => $COMMIT_ID"
       - name: print token
         env:
-          AWS_TEST_TOKEN: ${{ secrets.TOKEN}}
+          AWS_TEST_TOKEN: ${{ secrets.AWS_TEST_TOKEN}}
         run: echo my Token is $AWS_TEST_TOKEN
 
       # Runs a set of commands using the runners shell
