@@ -14,10 +14,6 @@ jobs:
         env:
           COMMIT_ID: ${{ github.sha }}
         run: echo "Commit id => $COMMIT_ID"
-      - name: print token
-        env:
-          TEST_TOKEN: ${{ secrets.AWS_TEST_TOKEN }}
-        run: echo my Token is $TEST_TOKEN
       - name: print nickname
         env:
           TEST_NAME: ${{ secrets.TEST_NICKNAME }}
