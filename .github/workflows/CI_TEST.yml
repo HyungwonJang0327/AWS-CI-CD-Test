@@ -17,7 +17,8 @@ jobs:
       - name: Check Node V
         run: node -v
       - name: "context"
-        env: COMMIT_ID: ${{ github.sha }}
+        env:
+          COMMIT_ID: ${{ github.sha }}
         run: echo "Commit id => $COMMIT_ID"
 
       # Runs a set of commands using the runners shell
