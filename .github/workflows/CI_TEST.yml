@@ -8,7 +8,7 @@ on:
   push:
     branches: ["main"]
   #pull_request:
-   # branches: ["develop"]
+  # branches: ["develop"]
 
   # Allows you to run this workflow manually from the Actions tab
   # workflow_dispatch:
@@ -31,6 +31,8 @@ jobs:
 
       - name: Check Node V
         run: node -v
+      - name: complie typescript
+        run: tsc app.tsx
 
       - name: Npm install
         run: npm install
