@@ -32,7 +32,7 @@ jobs:
       - name: Check Node V
         run: node -v
       - name: complie typescript
-        run: tsc app.tsx
+        run: tsc App.tsx
 
       - name: Npm install
         run: npm install
